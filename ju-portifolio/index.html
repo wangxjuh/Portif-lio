@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Juliana campos</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" id="open-profile-modal">
+                <img src="image.png" alt="Profile" class="profile-img">
+            </a>
+
+            <!-- Modal da foto de perfil -->
+            <div id="profile-modal" class="profile-modal">
+                <div class="profile-modal-content">
+                    <span class="profile-modal-close" id="close-profile-modal">&times;</span>
+                    <img src="image.png" alt="Profile Grande" class="profile-modal-img">
+                </div>
+            </div>
+
+            <div>
+                <h1>Juliana Campos</h1>
+                <p class="subtitle">Futura desenvolvedora Front-End</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="container about-curriculo-wrapper">
+            <div class="about-content">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Sou apaixonada por tecnologia e desenvolvimento web. Tenho afinidade com 
+                    <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> e <strong>React</strong>. 
+                    Atualmente estou estudando <strong>Java</strong> e tenho um pézinho em <strong>C</strong> e <strong>Python</strong>.
+                </p>
+            </div>
+            <div class="curriculo-card">
+                <a href="curriculo.pdf" class="btn btn-curriculo" target="_blank" rel="noopener noreferrer" download>
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobeacrobatreader.svg" alt="curriculo" style="width:28px;vertical-align:middle;margin-right:8px;background:#fff;border-radius:6px;">
+                    Baixar Currículo
+                </a>
+            </div>
+        </section>
+        <section id="projects" class="container">
+            <h2>Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sistema de Locação de Filmes</h3>
+                    <p>Aplicação web para cadastro, busca e locação de filmes, desenvolvida com HTML, CSS e JavaScript.</p>
+                    <a href="https://github.com/julianacampos/sistema-locacao-filmes" class="btn" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="project-card">
+                    <h3>Sistema de Dashboards</h3>
+                    <p>Painel interativo para visualização de dados e métricas, utilizando gráficos dinâmicos e responsivos.</p>
+                    <a href="https://github.com/julianacampos/sistema-dashboards" class="btn" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="project-card">
+                    <h3>Blog de Filmes</h3>
+                    <p>Blog para compartilhar resenhas, notícias e dicas sobre filmes, feito com HTML, CSS e JavaScript.</p>
+                    <a href="https://github.com/julianacampos/blog-filmes" class="btn" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="project-card">
+                    <h3>Gerador de Users e Senhas</h3>
+                    <p>Ferramenta para gerar usuários e senhas aleatórias, útil para testes e cadastros rápidos.</p>
+                    <a href="https://github.com/julianacampos/gerador-users-senhas" class="btn" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contato</h2>
+            <div class="contact-cards contact-logos">
+                <a href="mailto:julianacamposferreira1005@email.com" class="contact-logo-link" target="_blank" rel="noopener noreferrer" title="Email">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="contact-logo-img" style="background:#fff; border-radius:8px;">
+                </a>
+                <a href="https://www.linkedin.com/in/juliana-campos-62988b233/" class="contact-logo-link" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="contact-logo-img" style="background:#fff; border-radius:8px;">
+                </a>
+                <a href="https://github.com/wangxjuh?tab=repositories" class="contact-logo-link" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="contact-logo-img" style="background:#fff; border-radius:8px;">
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Juliana Campos. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.getElementById('open-profile-modal').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('profile-modal').style.display = 'flex';
+        };
+        document.getElementById('close-profile-modal').onclick = function() {
+            document.getElementById('profile-modal').style.display = 'none';
+        };
+        window.onclick = function(event) {
+            const modal = document.getElementById('profile-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
